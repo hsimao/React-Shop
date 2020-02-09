@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './directory.style.scss';
+import classes from './directory.module.scss';
 
 import MenuItem from '../MenuItem/menuItem.component';
 
@@ -48,7 +48,7 @@ class Directory extends Component {
   render() {
     const { sectoins } = this.state;
     return (
-      <div className='directory'>
+      <div className={classes.directory}>
         {/* 若傳遞的 props 與變數相同名稱, 可直接用解構方式 */}
         {sectoins.map(({ id, ...allProps }) => (
           <MenuItem key={id} {...allProps} />
