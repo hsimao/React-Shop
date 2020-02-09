@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './{{camelCase name}}.style.scss';
+import classes from './{{camelCase name}}.module.scss';
 
 class {{pascalCase name}} extends Component {
   constructor(props) {
@@ -7,7 +7,7 @@ class {{pascalCase name}} extends Component {
     this.state = { }
   }
   render() {
-    return <div className='{{camelCase name}}'>{{camelCase name}}</div>;
+    return <div className={ classes.{{camelCase name}} }>{{camelCase name}}</div>;
   }
 }
 
