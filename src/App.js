@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage/homePage.component';
 
 const HatsPage = () => (
   <div>

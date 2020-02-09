@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.scss';
+import './{{camelCase name}}.style.scss';
 
 class {{pascalCase name}} extends Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './{{camelCase name}}.style.scss';
 
 const {{pascalCase name}} = props => {
   return <div className='{{camelCase name}}'></div>;
