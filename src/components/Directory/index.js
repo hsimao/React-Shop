@@ -49,13 +49,9 @@ class Directory extends Component {
     const { sectoins } = this.state;
     return (
       <div className='directory'>
-        {sectoins.map(item => (
-          <MenuItem
-            key={item.id}
-            title={item.title}
-            imageUrl={item.imageUrl}
-            size={item.size}
-          />
+        {/* 若傳遞的 props 與變數相同名稱, 可直接用解構方式 */}
+        {sectoins.map(({ id, ...allProps }) => (
+          <MenuItem key={id} {...allProps} />
         ))}
       </div>
     );
