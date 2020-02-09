@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 
-const {{camelCase name}} = props => {
+const {{pascalCase name}} = props => {
   return <div className='{{camelCase name}}'></div>;
 };
 
-export default {{camelCase name}};
+export default {{pascalCase name}};
 

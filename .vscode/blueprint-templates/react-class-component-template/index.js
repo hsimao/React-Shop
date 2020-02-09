@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 
-class {{camelCase name}} extends Component {
+class {{pascalCase name}} extends Component {
   constructor(props) {
     super(props);
     this.state = { }
@@ -11,6 +11,6 @@ class {{camelCase name}} extends Component {
   }
 }
 
-export default {{camelCase name}};
+export default {{pascalCase name}};
 
 
