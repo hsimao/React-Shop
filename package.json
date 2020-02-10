@@ -21,7 +21,8 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.13.1",
+    "sass-resources-loader": "^2.0.1"
   },
   "browserslist": {
     "production": [
