@@ -20,4 +20,14 @@
     background-color: white;
     color: black;
   }
+
+  &.google-sign-in {
+    background-color: $blue-color;
+    color: white;
+
+    &:hover {
+      border: none;
+      background-color: darken($blue-color, 10);
+    }
+  }
 }
