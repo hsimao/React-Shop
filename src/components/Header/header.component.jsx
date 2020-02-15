@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { auth } from '../../firebase/firebase.utils';
 import CartIcon from '../CartIcon/cartIcon.component';
+import CartDropdown from '../CartDropdown/cartDropdown.component';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import classes from './header.module.scss';
@@ -32,6 +33,7 @@ const Header = ({ currentUser }) => {
         )}
         <CartIcon />
       </div>
+      <CartDropdown />
     </div>
   );
 };
