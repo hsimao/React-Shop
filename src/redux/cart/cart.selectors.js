@@ -10,6 +10,11 @@ export const selectCartItems = createSelector(
   cart => cart.cartItems,
 );
 
+export const selectCartHidden = createSelector(
+  [selectCart],
+  cart => cart.hidden,
+);
+
 // 每次計算 items 總數量時先檢查 selectCartItems 原本資料狀態，如有更改才執行
 export const selectCartItemsCount = createSelector(
   [selectCartItems],
