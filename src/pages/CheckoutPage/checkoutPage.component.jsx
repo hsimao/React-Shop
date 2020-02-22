@@ -6,6 +6,7 @@ import {
   selcetCartTotal,
 } from '../../redux/cart/cart.selectors';
 import CheckoutItem from '../../components/CheckoutItem/checkoutItem.component';
+import ButtonStripe from '../../components/ButtonStripe/buttonStripe.component';
 
 import classes from './checkoutPage.module.scss';
 
@@ -36,6 +37,12 @@ const CheckoutPage = ({ cartItems, total }) => {
       <div className={classes.total}>
         <span>TOTAL: ${total}</span>
       </div>
+      <div className={classes['test-warning']}>
+        *Please use the following test credit card for payments*
+        <br />
+        4242 4242 4242 4242
+      </div>
+      <ButtonStripe price={total} />
     </div>
   );
 };
