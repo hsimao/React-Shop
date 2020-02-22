@@ -7,7 +7,7 @@ const breakpoints = {
   lg: '1200px',
 };
 
-export const rwd = Object.keys(breakpoints).reduce((accumulator, label) => {
+const rwd = Object.keys(breakpoints).reduce((accumulator, label) => {
   accumulator[label] = (...args) => css`
     @media (max-width: ${breakpoints[label]}) {
       ${css(...args)};
@@ -15,3 +15,5 @@ export const rwd = Object.keys(breakpoints).reduce((accumulator, label) => {
   `;
   return accumulator;
 }, {});
+
+export default rwd;

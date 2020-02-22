@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import rwd from '../../assets/styles/rwd.styles';
 import { Link } from 'react-router-dom';
 
 // 可復用樣式
@@ -27,6 +28,9 @@ export const OptionsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${rwd.sm`
+    width: auto;
+  `}
 `;
 
 export const OptionLink = styled(Link)`
