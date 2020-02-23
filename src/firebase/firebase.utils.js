@@ -69,7 +69,11 @@ export const convertCollectionsSnapshotToMap = collections => {
     };
   });
 
-  console.log(transformedCollection);
+  // 將陣列轉換成可快速索引的物件格式 hashtables, 將 title 當成索引 key
+  return transformedCollection.reduce((acc, it) => {
+    acc[it.title.toLowerCase()] = it;
+    return acc;
+  }, {});
 };
 
 firebase.initializeApp(config);
