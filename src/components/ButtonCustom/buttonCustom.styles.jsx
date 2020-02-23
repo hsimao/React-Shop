@@ -23,12 +23,12 @@ const invertedButtonStyles = css`
   }
 `;
 
-const googleSignInStyles = css`
-  background-color: #4285f4;
+const googleSignInStyles = ({ theme: { colorBlue, darken } }) => css`
+  background-color: ${colorBlue};
   color: white;
 
   &:hover {
-    background-color: #357ae8;
+    background-color: ${darken(0.1, colorBlue)};
     border: none;
   }
 `;
