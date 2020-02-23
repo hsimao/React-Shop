@@ -56,6 +56,22 @@ export const addCollectionAndDocuments = async (
   return await batch.commit();
 };
 
+// 將 collection 快照轉換成前端使用格式資料
+export const convertCollectionsSnapshotToMap = collections => {
+  const transformedCollection = collections.docs.map(doc => {
+    const { title, items } = doc.data();
+
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items,
+    };
+  });
+
+  console.log(transformedCollection);
+};
+
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();
